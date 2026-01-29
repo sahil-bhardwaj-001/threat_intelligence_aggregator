@@ -1,6 +1,0 @@
-{
-    "threat_feeds": {},
-    "output_dir": "Output",
-    "input_feeds_dir": "Input_Feeds",
-    "allowlist_file": "allowlist.txt"
-}

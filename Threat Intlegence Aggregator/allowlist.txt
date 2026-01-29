@@ -1,4 +1,0 @@
-# Add IPs, Domains, or Hashes to exclude from the blocklist (one per line)
-# Example:
-# 192.168.1.1
-# google.com
