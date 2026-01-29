@@ -27,28 +27,18 @@ A Python-based tool designed to aggregate, normalize, and correlate Indicators o
 
 ## Usage
 
-1.  **Configuration**:
-    Ensure `config.json` is set up with your desired threat feeds and output settings.
-    ```json
-    {
-        "threat_feeds": {
-            "OpenPhish": "https://openphish.com/feed.txt",
-            ...
-        },
-        "input_feeds_dir": "Input_Feeds",
-        "output_dir": "Output",
-        "allowlist_file": "allowlist.txt"
-    }
-    ```
+1.  **Prepare Input Data**:
+    Place your raw data files (logs, CSVs, JSON, text) into the `Input_Feeds/` folder. The tool will process *all* files found in this directory.
 
 2.  **Run the Tool**:
     Execute the main script:
     ```bash
     python3 main.py
     ```
+    This script reads all files from `Input_Feeds/`, fetches data from configured URLs, and aggregates the results.
 
-3.  **View Results**:
-    Check the `Output/` directory for generated files:
+3.  **View Output**:
+    The tool automatically creates the `Output/` folder (if it doesn't exist) and generates the following files:
     *   `blocklist_ips.txt`
     *   `blocklist_domains.txt`
     *   `blocklist_urls.txt`
