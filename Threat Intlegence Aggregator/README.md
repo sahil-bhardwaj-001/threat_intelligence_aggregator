@@ -104,3 +104,18 @@ admin@phishing.org
 *   **URLs**: HTTP/HTTPS links.
 *   **Emails**: Standard email address formats.
 *   **Hashes**: MD5 (32 chars) and SHA256 (64 chars).
+
+## Allowlisting
+
+If you want to exclude specific IPs, URLs, domains, or other indicators from the generated blocklists, you can add them to the `allowlist.txt` file.
+
+1.  Open text file `allowlist.txt` (or create it if it doesn't exist).
+2.  Add the indicators you want to allow (whitelist), one per line.
+3.  The tool will check this file during processing. Any IP, Domain, URL, or Hash found in `allowlist.txt` will **not** be marked or included in the final blocklists or report.
+
+**Example `allowlist.txt` content:**
+```text
+192.168.1.1
+google.com
+ExampleTrustedHash123
+```
